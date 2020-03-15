@@ -1,0 +1,70 @@
+body{
+background-color: #00000003;
+
+}
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#desinflado{
+  display: none;
+}
+#inflado{
+animation-name: globoslide;
+animation-duration: 3s;
+
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.btn #inicio{
+  border: 1px solid gray;
+  width: 30%;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    border-radius: 50px;
+      font-size: 20px;
+      font-style: normal;
+
+}
+
+
+#desinflado{
+animation: globoexplot 2s forwards;
+}
+
+
+@keyframes  globoexplot {
+      0%   {opacity: 1;}
+      90%  {opacity: 1;}
+      100% {opacity: 0;}
+
+
+}
+
+ #sound1{
+   display: none;
+
+ }
+
+@media screen and (max-width:321px){
+body{
+  width: auto;
+  height: auto;
+}
+.globo-image1, .globo-image2{
+  width: auto;
+  height: auto;
+}
+}

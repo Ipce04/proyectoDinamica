@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <title>globo</title>
+</head>
+<body>
+  <div class="contenedor" >
+  <audio id="sound1" src="Sound/mixsonidos.mp3"></audio>
+
+    <img id= "inflado" src="images/globo.png">
+<img id= "desinflado" src="images/globo-explotado.png" width="450" >
+  </div>
+
+  <div class="btn">
+    <button  id="inicio"  type="button"  >Start</button>
+  </div>
+
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+
+var sonido1=document.getElementById("sound1");
+var sonido2=document.getElementById("sound2");
+ $(document).ready(function() {
+$("#inicio").click(function(){
+
+$("#inflado").animate({zoom: '150%' ,queue:false}, 5000);
+sonido1.play();
+setTimeout(function() {
+         $("#inflado").fadeOut(100);
+
+     },5000);
+
+
+
+
+setTimeout(function() {
+
+          $("#desinflado").fadeIn(1000);
+
+      },5095)
+
+
+      document.getElementById("inflado").style.display="block";
+
+      document.getElementById("desinflado").style.display="none";
+});
+
+ });
+
+
+
+
+  </script>
+
+
+
+</body>
+</html>
